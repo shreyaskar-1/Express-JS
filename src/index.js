@@ -6,7 +6,7 @@ const staticPath = path.join(__dirname,"../public")
 
 
 // builtin middleware
-app.use(express.static(staticPath))
+// app.use(express.static(staticPath))
 
 // app.get('/', function (req, res) {
 //   res.send('Hello World')
