@@ -4,11 +4,24 @@ const app = express();
 
 // Built-in middleware
 const static = path.join(__dirname, "../public2");
-app.use(express.static(static));
+// how to change the name of views
+
+const template = path.join(__dirname, "../src/templates");
+
+
+// setting view engine
+app.set("view engine","hbs");
+app.set("views",template);
+
+// app.use(express.static(static));
+
+// template engine route
+app.get("/", (req, res) => {
+    res.render("index",{dynamic:"whassup"});
+});
 
 app.get("/", (req, res) => {
-    // Sending index2.html when root route is accessed
-    res.sendFile(path.join(__dirname, "../public2/index2.html"));
+    res.sendFile("hello from the express server");
 });
 
 app.listen(3000, () => {

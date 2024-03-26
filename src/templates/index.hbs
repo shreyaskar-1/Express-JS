@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/index.css" />
+    <title>Kreativan Tech</title>
+  </head>
+  <body>
+    <style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh; /* Ensure the body fills the viewport height */
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+
+.main-content {
+    margin-top: 100px;
+    flex-grow: 1; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: #00BBEE;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    /* padding: 0 2rem; */
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto; 
+}
+
+.navbar .logo img {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.links-section .links {
+    display: flex;
+    gap: 3rem;
+}
+
+.navbar .actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: auto; 
+    margin-right: 20px;
+}
+
+.navbar .toggle_btn {
+    color: #000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.register_btn {
+    background-color: blue !important;
+    color: #fff;
+    padding: 22px 25px;
+    border: none;
+    outline: none;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 600px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .register_btn {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* home */
+.main-c{
+    flex-grow: 1; 
+    height: 520vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #fdfdfd;
+}
+/* #Hcontent{
+    height: 100%;
+    width: 100%;
+} */
+#Hcontent1{
+    margin-top: 9%;
+    width: 74%;
+    margin-left: 13%;
+}
+#Hcontent1 h1{
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+#Hcontent2{
+    margin-top: 2%;
+    background-color: #F2F5FA;
+}
+#Hcontent2-1{
+    padding-top: 8%;
+    display: flex;
+    margin-left: 12%;
+    width: 76%;
+    justify-content: space-between;
+}
+#Hcontent2-1 img{
+    border-bottom-left-radius: 70px;
+}
+#Hcontent2-1 p{
+    margin-left: 12%;
+    margin-top: 1%;
+    font-size: 14pt;
+    line-height: 1.875em;
+}
+#Hcontent2-2{
+    margin-top: 5%;
+    margin-left: 12%;
+    width: 75%;
+    justify-content: space-between;
+    display: flex;
+}
+.Hcontent2-2-img img{
+    opacity: 0.4;
+}
+.Hcontent2-2-img img:hover{
+    opacity: 1;
+}
+#Hcontent2-3{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 5%;
+    display: flex;
+}
+#Hcontent2-3-1{
+    position: absolute; 
+    margin-top: 2.5%; 
+    background-color: #005aac; 
+    height: 470px;
+    width: 48%;
+    border-radius: 6px;
+}
+#Hcontent2-3-2{
+    margin-left: 43%;
+    height: 470px;
+    width: 57%;
+}
+#Hcontent3{
+    margin-top: 5%;
+    margin-left: 20%;
+    width: 65%;
+}
+#Hcontent3 h3 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.25em;
+    letter-spacing: -0.03em;
+}
+#Hcontent4{
+    margin-top: 5%;
+    display: flex;
+    margin-left: 14%;
+}
+#Hcontent4 p{
+    margin-left: 10%;
+    width: 40%;
+    font-size: 14pt;
+    line-height: 1.875em;
+}
+
+.Hcontent5{
+    height: 8%;
+    width: 94%;
+    margin-top: 2%;
+    margin-left: 3%;
+    padding:5% 8% 5% 10%;
+    background-color:white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: static;
+}
+.Hcontent5-1{
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+#Htranstext{
+    height: 35%;
+    width: 100%;
+    margin-left: 7%;
+    font-size: 80px;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #005aac;
+}
+.Hcontent5-2{
+    height: 40%;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+    position:relative;
+    background-color:white;
+}
+#Hnrmltext{
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 1%;
+}
+#Hcontent6{
+    margin-top: 1%;
+    margin-left: 12%;
+    width: 76%;
+}
+#Hcontent6-1{
+    height: 5%;
+    /* margin-left: 12%; */
+}
+#Hcontent6-1 p{
+    font-size: 27px;
+    font-weight: 600;
+}
+#Hcontent6-1 p span{
+    height: 8px; 
+    width: 8px;
+    margin-bottom: 7px;
+    background-color: blue; 
+    border-radius: 100%;
+    display:inline-block
+}
+#Hcontent6-2{
+    padding-right: 4vw;
+    width: 100%;
+}
+.Hcontent6-2-1{
+    margin-top: 3%;
+ display: flex;
+}
+.content6-2-2{
+    margin-left: 2vw;
+    height:"240vh" ;
+    width:"350vw";
+}
+
+/* About */
+
+#content5{
+    height: 45%;
+    width: 94%;
+    margin-top: 4%;
+    margin-left: 3%;
+    padding:5% 8% 5% 10%;
+    background-color:white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
+
+#content5-1{
+    height: 95%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.transtext{
+    height: 35%;
+    width: 100%;
+    margin-left: 8%;
+    font-size: 80px;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #005aac;
+}
+#content5-2{
+    height: 10%;
+    width: 67%;
+    margin-top: -1%;
+    margin-left: 5%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    background-color:white;
+}
+.nrmltext{
+    font-size: 20px;
+    font-weight: 600;
+    padding-top:1%;
+}
+
+h1{
+    padding: 0 440px;
+    font-size: 60px;
+}
+#md{
+    display: flex;
+    padding: 30px 80px;
+    gap: 120px;
+}
+#md1{
+    height: 43vw;
+    width: 35vw;
+}
+#md p{
+    font-size: 18px;
+}
+#md span{
+    font-weight: bold;
+}
+
+#page2{
+    height: 80vh;
+    width: 100wh;
+    
+}
+#p1{
+   display: flex;
+   gap: 40px;
+   font-size: 5vh;
+   justify-content: center;
+   padding: 50px;
+}
+
+#pimg img{
+    padding-left: 100px;
+ height: 70vh;
+    width: 40vw;
+}
+#pimg{
+    display: flex;
+    margin-top: -120px;
+}
+#pimg p{
+    padding-right: 80px;
+    font-size: 28px;
+}
+#pimg p span{
+    font-weight: bolder;
+}
+#pp2{
+    padding-top: 80px;
+    display: flex;
+}
+#p2{
+    padding-right: 100px;
+    height: 80vh;
+    width: 40vw;
+}
+#pp2 p{
+    padding: 80px;
+    font-size: 28px;
+}
+#pp2 p span{
+    font-weight: bolder;
+}
+
+#page3{
+    width:100vw;
+    height:100vh;
+}
+
+.footer {
+    height: auto;
+    background-color: #ebeced;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.upper {
+    display: flex;
+    padding: auto;
+    background-color: #ebeced;
+    margin-top: 40px;
+}
+
+.footer-div {
+    display: flex;
+    justify-content: center; /* Center the divs horizontally */
+}
+
+.footer-div > div {
+    margin: 0 80px; /* Add space between the divs */
+    text-align: center; /* Center the content inside each div */
+}
+
+
+.div1 img{
+    display: flex;
+    margin: 0 auto;
+}
+
+.div1 p{
+    text-align: center;
+
+}
+
+
+.div2 h6{
+    margin: 0 10px;
+    padding: 20px;
+    color: black;
+font-size: 20px;
+}
+
+.div2 ul{
+    margin: 0 10px;
+    padding: 20px;
+    color: black;
+    font-size: 15px;
+    list-style: none;
+}
+
+.div2 ul li a{
+    line-height: 1.5rem;
+    text-decoration: none;
+    color: rgb(0, 179, 255);
+}
+.div3 h6{
+    margin: 0 10px;
+    padding: 20px;
+    color: black;
+font-size: 20px;
+}
+.div3 p{
+    color: black;
+font-size: 12px;
+margin-bottom: 10px;
+}
+.div4 h6{
+    margin: 0 10px;
+    padding: 20px;
+    color: black;
+font-size: 20px;
+}
+.div4 ul{
+    margin: 0 10px;
+    padding: 20px;
+    color: black;
+    font-size: 15px;
+    list-style: none;
+}
+
+.div4 ul li a{
+    line-height: 1.5rem;
+    text-decoration: none;
+    color: rgb(0, 179, 255);
+}
+
+.lower {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px 0; /* Adjust padding as needed */ 
+}
+
+.lower-left{
+    margin-right: 400px; 
+}
+
+.lower-right {
+    margin-left: 200px;
+}
+
+.lower-right ul {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.lower-right li {
+    margin-left: 20px; 
+}
+
+.lower-right li:first-child {
+    margin-left: 0; 
+}
+
+.lower-right li a{
+    text-decoration: none;
+    color:black;
+}
+
+.line {
+    width: calc(100% - 40px); /* Adjust width based on margin */
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid #00BBEE; /* Change border color to blue */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .register_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .navbar .search_btn {
+        margin-left: 80px;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+</style>
+    <header class="header">
+      <div class="navbar">
+        <!-- Section 1 -->
+        <div class="logo">
+          <a href="#"
+            ><img
+              src="/assets/WhatsApp Image 2024-02-13 at 15.15.00_d8c6e3d6.jpg "
+              alt=""
+              height="35"
+              width="25"
+          /></a>
+          <a href="#"
+            ><img src="/assets/kreativanlogo.png" alt="" height="67" width="234"
+          /></a>
+        </div>
+        <!-- Section 2 -->
+        <div class="links-section">
+          <ul class="links">
+            <li><a href="">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="placement.html">Placement Drive</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">{{dynamic}}</a></li>
+          </ul>
+        </div>
+        <!-- Section 3 -->
+        <div class="actions">
+          <a href="#" class="search_btn" onclick="toggleSearchField()">
+            <i class="fas fa-solid fa-magnifying-glass"></i>
+          </a>
+          <a href="Registeration.html" class="register_btn">Registration Form</a>
+        </div>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="placement.html">Placement Drive</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="Registeration.html" class="register_btn">Registration Form</a></li>
+      </div>
+    </header>
+
+    <div class="main-c">
+              <!-- Content Section -->
+              <div id="Hcontent">
+                <div id="Hcontent1">
+                    <h1>A Digital Marketing Company in Chandigarh with a Difference</h1>
+                    <center>
+                        <h1>and Proven Expertise.</h1>
+                    </center>
+          
+    </div>
+    
+                <div id="Hcontent2">
+                    <div id="Hcontent2-1">
+                        <div id="Hd1"><img src="/assets/WhatsApp Image 2024-02-16 at 10.30.48_3d9da272.jpg" alt="" height="540px" width="540px"></div>
+                        <div id="Hcontent2-1-d2">
+                            <p>At Kreativan Technologies, we help small & midsize business enterprises across the globe, get
+                                the
+                                desired ROI through our bespoke web and allied services. The whole idea is to reach out to a
+                                wider audience locally or globally, and convert prospects to new customers. The bottomline
+                                is to
+                                increase conversion rate, visitor footfalls, traffic, sales, revenue, leads and new
+                                subscribers
+                                for any organization, across the board.</p>
+                            <br>
+                            <p>As the <span style="font-weight: 700;">best digital marketing agency</span>, we’ve mastered
+                                the
+                                art of website design,
+                                development and optimization; thanks to our highly professional team of qualified web
+                                designers
+                                & developers, web analysts, SEO strategists, IT experts and digital marketers that leave no
+                                stone unturned in bolstering a site’s overall performance</p>
+                        </div>
+                    </div>
+    
+                    <div id="Hcontent2-2">
+    
+                        <div class="Hcontent2-2-img" ><img src="/assets/WhatsApp Image 2024-02-16 at 10.30.45_42d064be.jpg" alt="" height="75px" width="140px"></div>
+                        <div class="Hcontent2-2-img" ><img src="/assets/vector-01-01-scaled.jpg" alt="" height="75px" width="140px"></div>
+                        <div class="Hcontent2-2-img" ><img src="/assets/Android-01-scaled.jpg" alt="" height="75px" width="140px"></div>
+                        <div class="Hcontent2-2-img" ><img src="/assets/google-01-scaled.jpg" alt="" height="75px" width="140px"></div>
+                        <div class="Hcontent2-2-img" ><img src="/assets/ios-01-1-scaled.jpg" alt="" height="75px" width="140px"></div>
+                        <div class="Hcontent2-2-img" ><img src="/assets/seo-01-scaled.jpg" alt="" height="75px" width="140px"></div>
+                        <div class="Hcontent2-2-img" ><img src="/assets/training-01-scaled.jpg" alt="" height="75px" width="140px"></div>
+                    </div>
+    
+                    <div id="Hcontent2-3">
+                        <div id="Hcontent2-3-1">
+                            <h2>FAQ</h2>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div id="Hcontent2-3-2"><img src="/assets/WhatsApp Image 2024-02-16 at 10.30.45_8f4b3c7a.jpg" alt="" height="100%" width="100%"
+                                style="border-radius: 6px;"></div>
+                    </div>
+                </div>
+    
+                <div id="Hcontent3">
+                    <h3>Among the Top Digital Marketing Companies in North India</h3>
+                </div>
+    
+                <div id="Hcontent4">
+                    <img src="/assets/pp2.jpg" alt="" height="350px" width="500px">
+                    
+    <p>It all starts with a project feasibility study, and thereafter a team is allocated with an
+                        experienced
+                        project manager, looking into the critical aspects of software development, testing and final
+                        delivery.
+                        A custom software that looks into the needs of a client or business, and streamlines the work
+                        processes,
+                        is what matters the most. Whether it is a highly responsive mobile App development with the
+                        best-in-class UI/UX features or a standard company software, it must encompass all the aspects of
+                        product & service life-cycle, shopping cart features, and other vital information, as specified by
+                        the
+                        client. Being the <span style="font-weight: 700;"> best digital marketing company</span> in
+                        Chandigarh,
+                        we deliver custom software & mobile application development solutions in an affordable way. </p>
+                </div>
+    
+                <div class="Hcontent5">
+                    <div class="Hcontent5-1">
+                        <div id="Htranstext">89</div>
+                        <div id="Htranstext">130</div>
+                        <div id="Htranstext">78</div>
+                        <div id="Htranstext">24</div>
+                    </div>
+                    <div class="Hcontent5-2">
+                        <div id="Hnrmltext">Business Partners</div>
+                        <div id="Hnrmltext">Finished Projects</div>
+                        <div id="Hnrmltext" >Happy Clients</div>
+                        <div id="Hnrmltext">Awards Winning</div>
+                    </div>
+                </div>
+                
+    <hr style="margin-top: 4%;  margin-left:22.5%;width: 65%;  opacity:0.2; height: 2px;">
+                <hr style="margin-top: 1px; margin-left:22.5%;width: 65%; opacity: 0.2; height: 2px;">
+    
+                <div id="Hcontent6">
+                    <div id="Hcontent6-1">
+                        <p>Our Blogs <span></span></p>
+                    </div>
+    
+                    <div id="Hcontent6-2">
+                        <div class="Hcontent6-2-1">
+                            <div class="Hcontent6-2-2"></div>
+                            <div class="Hcontent6-2-2"></div>
+                            <div class="Hcontent6-2-2"></div>
+                        </div>
+                        <div class="Hcontent6-2-1">
+                            <div class="Hcontent6-2-2"><img src="/assets/WhatsApp Image 2024-02-16 at 10.25.55_5d42f832.jpg" alt="" height="240vh" width="350vw"></div>
+                            <div class="Hcontent6-2-2"><img src="/assets/WhatsApp Image 2024-02-16 at 10.30.46_6f6b9368.jpg" alt="" height="240vh" width="350vw"></div>
+                            <div class="Hcontent6-2-2"><img src="/assets/WhatsApp Image 2024-02-16 at 10.30.47_0aae8972.jpg" alt="" height="240vh" width="350vw"></div>
+                        </div>
+                        <div class="Hcontent6-2-1">
+                            <div class="Hcontent6-2-2"><img src="/assets/WhatsApp Image 2024-02-16 at 10.30.45_1e73dd76.jpg" alt="" height="240vh" width="350vw"></div>
+                            <div class="Hcontent6-2-2"><img src="/assets/WhatsApp Image 2024-02-16 at 10.30.48_ec545751.jpg" alt="" height="240vh" width="350vw"></div>
+                            <div class="Hcontent6-2-2"><img src="/assets/WhatsApp Image 2024-02-16 at 10.30.47_5270f3dc.jpg" alt="" height="240vh" width="350vw"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- <footer class="footer"> -->
+      <footer>
+        <div class="footer">
+            <div class="upper">
+                <div class="footer-div">
+                    <div class="div1">
+                        <img height="50px"  src="/assets/kreativanlogo.png" alt="">
+                        <br>
+                        <p>
+                            Empowering the digital frontier through <br> 
+                            cutting-edge solutions, Kreativan <br> 
+                            Technologies  sparks innovation, drives <br>
+                            rogress, and shapes a dynamic future <br>
+                            with passion, precision, and relentless <br>
+                            commitment to excellence. We are the <br>
+                            architects of digital transformation. With <br>
+                            visionary solutions, we shape tomorrow's <br>
+                            world today.
+                        </p>
+                    </div>
+                    <div class="div2">
+                        <h6>OUR SERVICES</h6>
+                        <ul>
+                            <li><a href="">Web Development</a></li>
+                            <li><a href="">App Development</a></li>
+                            <li><a href="">App Development</a></li>
+                            <li><a href="">Content Writing</a></li>
+                            <li><a href="">UI/UX Design</a></li>
+                    </div>
+                    <div class="div3">
+                        <h6>CONTACT US</h6>
+                        <p>Email: kreativantech@gmail.com</p>
+                        <p>Address: Aeren Building, Plot No. <br>
+                          14, IT Park Rd, opposite Infosys,<br>
+                          Phase - I, Sector 13, Chandigarh,<br> 
+                          Panchkula, Chandigarh 160101</p>
+                        <p>Telephone: 8264470355</p>
+                    </div>
+                    <div class="div4">
+                        <h6>OUR COMPANY</h6>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="training.html">Training</a></li>
+                            <li><a href="placement.html">Placement Drive</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div> 
+                </div> 
+            </div>
+            <hr class="line">          
+            <div class="lower">
+                <div class="lower-left">
+                    Kreativan Technologies
+                </div>
+                <div class="lower-right">
+                    <ul>
+                        <li><a href="">Home |</a></li>
+                        <li><a href="about.html">About Us |</a></li>
+                        <li><a href="service.html">Services |</a></li>
+                        <li><a href="training.html">Training |</a></li>
+                        <li><a href="placement.html">Placement Drive |</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</footer>
+    <!-- </footer> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    var tl = gsap.timeline()
+        tl.from("#md1", {
+            rotate: 2,
+            duration: 1,
+            yoyo: true,
+            repeat: -1
+        })
+        
+        var tl = gsap.timeline()
+        tl.from("#p",{
+             scale:0,
+             duration:1,
+            yoyo:true,
+            repeat:-1
+        })
+        
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            function toggleSearchField() {
+                var searchField = document.getElementById("searchField");
+                searchField.classList.toggle("show");
+            }
+        
+            const toggleBtn = document.querySelector(".toggle_btn");
+            const toggleBtnIcon = document.querySelector(".toggle_btn i");
+            const dropdownMenu = document.querySelector(".dropdown_menu");
+            toggleBtn.onclick = function () {
+                dropdownMenu.classList.toggle("open");
+                const isOpen = dropdownMenu.classList.contains("open");
+        
+                toggleBtnIcon.classList = isOpen
+                    ? "fa-solid fa-xmark"
+                    : "fa-solid fa-bars";
+            };
+        });
+        
+        
+        // function vowels(str) {
+        //     for (const char of str) {
+        //         console.log(char);
+        //     }
+        // }
+        
+        
+        // nums = [25, 36, 49];
+        
+        // nums.map((val)=>{
+        //     console.log(val*val);
+        // });</script>
+  </body>
+</html>
+                              
