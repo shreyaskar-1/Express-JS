@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    margin-top:100px;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+
+.main-content {
+    margin-top: 100px;
+    flex-grow: 1; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: #00BBEE;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    /* padding: 0 2rem; */
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto; 
+}
+
+.navbar .logo img {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.links-section .links {
+    display: flex;
+    gap: 3rem;
+}
+
+.navbar .actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: auto; 
+    margin-right: 20px;
+}
+
+.navbar .toggle_btn {
+    color: #000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.register_btn {
+    background-color: blue !important;
+    color: #fff;
+    padding: 22px 25px;
+    border: none;
+    outline: none;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 600px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .register_btn {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer {
+    height: auto;
+    background-color: #ebeced;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.upper {
+    display: flex;
+    padding: auto;
+    background-color: #ebeced;
+    margin-top: 40px;
+}
+
+.footer-div {
+    display: flex;
+    justify-content: center; /* Center the divs horizontally */
+}
+
+.footer-div > div {
+    margin: 0 80px; /* Add space between the divs */
+    text-align: center; /* Center the content inside each div */
+}
+
+
+.div1 img{
+    display: flex;
+    margin: 0 auto;
+}
+
+.div1 p{
+    text-align: center;
+
+}
+
+
+.div2 h6{
+    margin: 0 10px;
+    padding: 20px;
+    color: black;
+font-size: 20px;
+}
+
+.div2 ul{
+    margin: 0 10px;
+    padding: 20px;
+    color: black;
+    font-size: 15px;
+    list-style: none;
+}
+
+.div2 ul li a{
+    line-height: 1.5rem;
+    text-decoration: none;
+    color: rgb(0, 179, 255);
+}
+.div3 h6{
+    margin: 0 10px;
+    padding: 20px;
+    color: black;
+font-size: 20px;
+}
+.div3 p{
+    color: black;
+font-size: 12px;
+margin-bottom: 10px;
+}
+.div4 h6{
+    margin: 0 10px;
+    padding: 20px;
+    color: black;
+font-size: 20px;
+}
+.div4 ul{
+    margin: 0 10px;
+    padding: 20px;
+    color: black;
+    font-size: 15px;
+    list-style: none;
+}
+
+.div4 ul li a{
+    line-height: 1.5rem;
+    text-decoration: none;
+    color: rgb(0, 179, 255);
+}
+
+.lower {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px 0; /* Adjust padding as needed */ 
+}
+
+.lower-left{
+    margin-right: 400px; 
+}
+
+.lower-right {
+    margin-left: 200px;
+}
+
+.lower-right ul {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.lower-right li {
+    margin-left: 20px; 
+}
+
+.lower-right li:first-child {
+    margin-left: 0; 
+}
+
+.lower-right li a{
+    text-decoration: none;
+    color:black;
+}
+
+.line {
+    width: calc(100% - 40px); /* Adjust width based on margin */
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid #00BBEE; /* Change border color to blue */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .register_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .navbar .search_btn {
+        margin-left: 80px;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+</style>
+    {{>header}}
+
+    <h1>whasssup</h1>
+
+    {{>footer}}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    var tl = gsap.timeline()
+        tl.from("#md1", {
+            rotate: 2,
+            duration: 1,
+            yoyo: true,
+            repeat: -1
+        })
+        
+        var tl = gsap.timeline()
+        tl.from("#p",{
+             scale:0,
+             duration:1,
+            yoyo:true,
+            repeat:-1
+        })
+        
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            function toggleSearchField() {
+                var searchField = document.getElementById("searchField");
+                searchField.classList.toggle("show");
+            }
+        
+            const toggleBtn = document.querySelector(".toggle_btn");
+            const toggleBtnIcon = document.querySelector(".toggle_btn i");
+            const dropdownMenu = document.querySelector(".dropdown_menu");
+            toggleBtn.onclick = function () {
+                dropdownMenu.classList.toggle("open");
+                const isOpen = dropdownMenu.classList.contains("open");
+        
+                toggleBtnIcon.classList = isOpen
+                    ? "fa-solid fa-xmark"
+                    : "fa-solid fa-bars";
+            };
+        });
+        </script>
+</body>
+</html>
